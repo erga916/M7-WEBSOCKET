@@ -14,16 +14,16 @@ fs.readFile("preguntas.json", (err, data) => {
     return;
   }
   preguntas = JSON.parse(data).map((pregunta) => ({ ...pregunta, responded: 0 }));
-  console.log("Preguntas cargadas:", preguntas);
+  //console.log("Preguntas cargadas:", preguntas);
 });
 
 let players = [];
 
 io.on("connection", (socket) => {
-  console.log("Un cliente se ha conectado.");
+  //console.log("Un cliente se ha conectado.");
   let gameStarted = false;
   socket.on("join", ({ nickname }, callback) => {
-    console.log(`El jugador ${nickname} se ha unido.`);
+    //console.log(`El jugador ${nickname} se ha unido.`);
 
     if (players.some((player) => player.name === nickname)) {
       callback({ status: "error", message: "El nombre de usuario ya está en uso." });
@@ -45,7 +45,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("answer", (data) => {
-    console.log(`El jugador ${data.nickname} ha respondido: ${data.answer}`);
+    //console.log(`El jugador ${data.nickname} ha respondido: ${data.answer}`);
     let player = players.find((p) => p.name === data.nickname);
     if (player) {
       let question = preguntas[data.question];
@@ -64,7 +64,7 @@ io.on("connection", (socket) => {
   });  
 
   socket.on("disconnect", () => {
-    console.log(`El jugador ${socket.id} se ha desconectado.`);
+    //console.log(`El jugador ${socket.id} se ha desconectado.`);
     players = players.filter((p) => p.id !== socket.id);
     io.emit("players", players);
   });
@@ -102,7 +102,7 @@ function nextQuestion() {
 }
 
 function endGame() {
-  console.log("El juego ha terminado");
+  //console.log("El juego ha terminado");
   players.sort((a, b) => b.score - a.score);
   let winners = players.slice(0, 3); // Aquí toma los 3 primeros jugadores después de ordenar
   io.emit("winners", winners);
