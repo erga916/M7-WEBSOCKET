@@ -10,6 +10,8 @@ const startButton = document.getElementById("startButton");
 
 startButton.addEventListener("click", () => {
   socket.emit("startGame");
+  startButton.style.display = "none";
+  liveScoreboard.style.display = "block";
 });
 
 sendButton.addEventListener("click", () => {
@@ -22,8 +24,8 @@ sendButton.addEventListener("click", () => {
     if (response.status === "error") {
       alert(response.message);
     } else {
-      sendButton.disabled = true;
-      nicknameInput.disabled = true;
+      sendButton.style.display = "none";
+      nicknameInput.style.display = "none";
       game.style.display = "block";
     }
   });
@@ -78,6 +80,7 @@ socket.on("winners", (winners) => {
   if (socket.id === hostId) {
     restartButton.style.display = "block";
   }
+  liveScoreboard.style.display = "none";
   document.getElementById("podium").style.display = "block";
   displayPodium(winners);
 });
@@ -134,5 +137,6 @@ function resetGameUI() {
   questionElement.textContent = "";
   answersElement.innerHTML = "";
   pointsElement.textContent = "0";
+  liveScoreboard.style.display = "block";
   document.getElementById("podium").style.display = "none";
 }

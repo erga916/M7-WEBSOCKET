@@ -51,16 +51,15 @@
     </style>
   </head>
   <body>
-    Entra el teu nom
-    <input id="nicknameInput" type="text" />
+    <input id="nicknameInput" type="text" placeholder="Entra el teu nom"/>
     <button id="sendButton">Enviar</button>
     <button id="startButton" style="display: none">Iniciar juego</button>
     <div id="game" style="display: none">
       <h2 id="question"></h2>
       <div id="answers"></div>
-      <div id="scoreboard">Tus puntos: <span id="points">0</span></div>
+      <div id="scoreboard" style="display: none">Tus puntos: <span id="points">0</span></div>
       <button id="restartButton" style="display: none">Reiniciar juego</button>
-      <div id="liveScoreboard">
+      <div id="liveScoreboard" style="display: none">
         <h3>Marcador en vivo:</h3>
         <ul id="liveScores"></ul>
       </div>
