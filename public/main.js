@@ -63,6 +63,7 @@ socket.on("startGame", () => {
 socket.on("question", (data) => {
   displayQuestion(data);
   enableAnswerButtons();
+  liveScoreboard.style.display = "block";
 });
 
 const pointsElement = document.getElementById("points");
@@ -137,6 +138,6 @@ function resetGameUI() {
   questionElement.textContent = "";
   answersElement.innerHTML = "";
   pointsElement.textContent = "0";
-  liveScoreboard.style.display = "block";
+  liveScoreboard.style.display = "none";
   document.getElementById("podium").style.display = "none";
 }
