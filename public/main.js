@@ -140,6 +140,7 @@ function resetGameUI() {
   pointsElement.textContent = "0";
   liveScoreboard.style.display = "none";
   podium.style.display = "none";
+  updateLiveScoreboard(players); // Añade esta línea
 }
 
 socket.on("hidePodium", () => {

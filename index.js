@@ -39,10 +39,11 @@ io.on("connection", (socket) => {
 
   socket.on("startGame", () => {
     if (!gameStarted && players.length > 0) {
+      io.emit("liveScoreboard", players); // Mueve esta línea aquí
       gameStarted = true;
       startGame();
     }
-  });
+  });  
 
   socket.on("answer", (data) => {
     //console.log(`El jugador ${data.nickname} ha respondido: ${data.answer}`);
@@ -85,6 +86,7 @@ function startGame() {
   io.emit("hidePodium");
   questionIndex = 0;
   nextQuestion();
+  io.emit("liveScoreboard", players);
 }
 
 function nextQuestion() {
