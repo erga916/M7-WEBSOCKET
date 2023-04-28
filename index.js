@@ -84,6 +84,7 @@ let intervalId;
 
 function startGame() {
   io.emit("hidePodium");
+  io.emit("hideWaitingPlayers"); // Agrega esta línea
   questionIndex = 0;
   nextQuestion();
   io.emit("liveScoreboard", players);

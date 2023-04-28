@@ -12,6 +12,7 @@ startButton.addEventListener("click", () => {
   socket.emit("startGame");
   startButton.style.display = "none";
   liveScoreboard.style.display = "block";
+  waitingPlayers.style.display = "none";
 });
 
 sendButton.addEventListener("click", () => {
@@ -27,6 +28,7 @@ sendButton.addEventListener("click", () => {
       sendButton.style.display = "none";
       nicknameInput.style.display = "none";
       game.style.display = "block";
+      waitingPlayers.style.display = "block";
     }
   });
 });
@@ -54,6 +56,7 @@ socket.on("showStartButton", (data) => {
 });
 
 socket.on("startGame", () => {
+  waitingPlayers.style.display = "none";
   if (!window.gameStarted && players.length > 0) {
     window.gameStarted = true;
     startGame();
@@ -69,6 +72,7 @@ socket.on("question", (data) => {
 const pointsElement = document.getElementById("points");
 
 socket.on("players", (players) => {
+  updateWaitingPlayers(players);
   const player = players.find((p) => p.name === nicknameInput.value);
   if (player) {
     pointsElement.textContent = player.score;
@@ -145,5 +149,19 @@ function resetGameUI() {
 
 socket.on("hidePodium", () => {
   document.getElementById("podium").style.display = "none";
+});
+
+function updateWaitingPlayers(players) {
+  const playersList = document.getElementById("playersList");
+  playersList.innerHTML = "";
+  players.forEach((player) => {
+    const li = document.createElement("li");
+    li.textContent = player.name;
+    playersList.appendChild(li);
+  });
+}
+
+socket.on("hideWaitingPlayers", () => {
+  waitingPlayers.style.display = "none";
 });
 
