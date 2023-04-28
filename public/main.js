@@ -13,6 +13,7 @@ startButton.addEventListener("click", () => {
   startButton.style.display = "none";
   liveScoreboard.style.display = "block";
   waitingPlayers.style.display = "none";
+  questionSelect.style.display = "none";
 });
 
 sendButton.addEventListener("click", () => {
@@ -61,6 +62,9 @@ socket.on("startGame", () => {
     window.gameStarted = true;
     startGame();
   }
+  if (socket.id === hostId) {
+    questionSelect.style.display = "none"; // Añadir esta línea
+  }
 });
 
 socket.on("question", (data) => {
@@ -84,6 +88,7 @@ socket.on("winners", (winners) => {
   answersElement.innerHTML = "Ganadores: " + winners.map(w => w.name).join(", ");
   if (socket.id === hostId) {
     restartButton.style.display = "block";
+    questionSelect.style.display = "inline";
   }
   liveScoreboard.style.display = "none";
   document.getElementById("podium").style.display = "block";
@@ -97,6 +102,7 @@ socket.on("liveScoreboard", (players) => {
 restartButton.addEventListener("click", () => {
   socket.emit("restart");
   restartButton.style.display = "none";
+  questionSelect.style.display = "none";
   resetGameUI();
 });
 
