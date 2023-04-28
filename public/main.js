@@ -7,6 +7,10 @@ const questionElement = document.getElementById("question");
 const answersElement = document.getElementById("answers");
 const restartButton = document.getElementById("restartButton");
 const startButton = document.getElementById("startButton");
+const questionSelect = document.getElementById("questionSelect");
+const labelSelect = document.getElementById("labelSelect");
+const inputColor = document.getElementById("inputColor");
+const spanColor = document.getElementById("spanColor");
 
 startButton.addEventListener("click", () => {
   socket.emit("startGame");
@@ -14,6 +18,7 @@ startButton.addEventListener("click", () => {
   liveScoreboard.style.display = "block";
   waitingPlayers.style.display = "none";
   questionSelect.style.display = "none";
+  labelSelect.style.display = "none";
 });
 
 sendButton.addEventListener("click", () => {
@@ -26,6 +31,8 @@ sendButton.addEventListener("click", () => {
     if (response.status === "error") {
       alert(response.message);
     } else {
+      spanColor.style.display = "none";
+      inputColor.style.display = "none";
       sendButton.style.display = "none";
       nicknameInput.style.display = "none";
       game.style.display = "block";
@@ -63,7 +70,8 @@ socket.on("startGame", () => {
     startGame();
   }
   if (socket.id === hostId) {
-    questionSelect.style.display = "none"; // Añadir esta línea
+    questionSelect.style.display = "none";
+    labelSelect.style.display = "none";
   }
 });
 
@@ -89,6 +97,7 @@ socket.on("winners", (winners) => {
   if (socket.id === hostId) {
     restartButton.style.display = "block";
     questionSelect.style.display = "inline";
+    labelSelect.style.display = "inline-block";
   }
   liveScoreboard.style.display = "none";
   document.getElementById("podium").style.display = "block";
@@ -103,6 +112,7 @@ restartButton.addEventListener("click", () => {
   socket.emit("restart");
   restartButton.style.display = "none";
   questionSelect.style.display = "none";
+  labelSelect.style.display = "none";
   resetGameUI();
 });
 
@@ -171,11 +181,10 @@ socket.on("hideWaitingPlayers", () => {
   waitingPlayers.style.display = "none";
 });
 
-const questionSelect = document.getElementById("questionSelect");
-
 socket.on("showQuestionSelect", (data) => {
   if (socket.id === data.hostId) {
     questionSelect.style.display = "inline";
+    labelSelect.style.display = "inline-block";
   }
 });
 
