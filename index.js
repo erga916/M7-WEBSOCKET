@@ -82,6 +82,7 @@ let questionIndex = 0;
 let intervalId;
 
 function startGame() {
+  io.emit("hidePodium");
   questionIndex = 0;
   nextQuestion();
 }

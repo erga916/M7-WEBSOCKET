@@ -139,5 +139,10 @@ function resetGameUI() {
   answersElement.innerHTML = "";
   pointsElement.textContent = "0";
   liveScoreboard.style.display = "none";
-  document.getElementById("podium").style.display = "none";
+  podium.style.display = "none";
 }
+
+socket.on("hidePodium", () => {
+  document.getElementById("podium").style.display = "none";
+});
+
