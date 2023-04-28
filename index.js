@@ -8,7 +8,7 @@ app.use(express.static("public"));
 
 let preguntas = [];
 
-fs.readFile("preguntas.json", (err, data) => {
+fs.readFile("preguntas1.json", (err, data) => {
   if (err) {
     console.error(err);
     return;
