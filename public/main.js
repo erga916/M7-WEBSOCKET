@@ -165,3 +165,15 @@ socket.on("hideWaitingPlayers", () => {
   waitingPlayers.style.display = "none";
 });
 
+const questionSelect = document.getElementById("questionSelect");
+
+socket.on("showQuestionSelect", (data) => {
+  if (socket.id === data.hostId) {
+    questionSelect.style.display = "inline";
+  }
+});
+
+questionSelect.addEventListener("change", () => {
+  const selectedFile = questionSelect.value;
+  socket.emit("changeQuestionFile", { filename: selectedFile });
+});

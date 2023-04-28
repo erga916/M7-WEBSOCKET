@@ -8,18 +8,36 @@ app.use(express.static("public"));
 
 let preguntas = [];
 
-fs.readFile("preguntas1.json", (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  preguntas = JSON.parse(data).map((pregunta) => ({ ...pregunta, responded: 0 }));
-  //console.log("Preguntas cargadas:", preguntas);
-});
+function loadQuestions(filename) {
+  fs.readFile(filename, (err, data) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    preguntas = JSON.parse(data).map((pregunta) => ({ ...pregunta, responded: 0 }));
+    //console.log("Preguntas cargadas:", preguntas);
+  });
+}
+
+function resetGame() {
+  players = players.map((player) => ({ ...player, score: 0 }));
+  io.emit("players", players);
+  io.emit("hidePodium");
+  io.emit("hideWaitingPlayers");
+  clearTimeout(intervalId);
+  questionIndex = 0;
+  gameStarted = false;
+}
 
 let players = [];
 
 io.on("connection", (socket) => {
+  socket.on("changeQuestionFile", (data) => {
+    loadQuestions(data.filename);
+    if (gameStarted) {
+      resetGame();
+    }
+  });  
   //console.log("Un cliente se ha conectado.");
   let gameStarted = false;
   socket.on("join", ({ nickname }, callback) => {
@@ -32,6 +50,7 @@ io.on("connection", (socket) => {
       io.emit("players", players);
       if (players.length === 1) {
         socket.emit("showStartButton", { hostId: socket.id });
+        socket.emit("showQuestionSelect", { hostId: socket.id });
       }
       callback({ status: "success" });
     }
@@ -43,7 +62,7 @@ io.on("connection", (socket) => {
       gameStarted = true;
       startGame();
     }
-  });  
+  });
 
   socket.on("answer", (data) => {
     //console.log(`El jugador ${data.nickname} ha respondido: ${data.answer}`);
@@ -56,13 +75,13 @@ io.on("connection", (socket) => {
         io.emit("players", players); // Emit the players event to update the score
         io.emit("liveScoreboard", players);
       }
-  
+
       question.responded++;
       if (question.responded === players.length) {
         nextQuestion();
       }
     }
-  });  
+  });
 
   socket.on("disconnect", () => {
     //console.log(`El jugador ${socket.id} se ha desconectado.`);
