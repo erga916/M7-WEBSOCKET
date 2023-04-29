@@ -138,7 +138,7 @@ function updateLiveScoreboard(players) {
     .sort((a, b) => b.score - a.score) // Ordena las puntuaciones de mayor a menor
     .forEach((player) => {
       const li = document.createElement("li");
-      li.textContent = `${player.name}: ${player.score}`;
+      li.textContent = `${player.name} ➜ ${player.score}`;
       liveScores.appendChild(li);
     });
 }
