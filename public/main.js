@@ -171,9 +171,11 @@ function updateWaitingPlayers(players) {
   const playersList = document.getElementById("playersList");
   playersList.innerHTML = "";
   players.forEach((player) => {
-    const li = document.createElement("li");
-    li.textContent = player.name;
-    playersList.appendChild(li);
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.textContent = player.name;
+    tr.appendChild(td);
+    playersList.appendChild(tr);
   });
 }
 

@@ -19,15 +19,21 @@
   <button id="startButton" style="display: none">Iniciar juego</button>
   <br>
   <label id="labelSelect" style="display: none">
-  <select id="questionSelect" name="options" style="display: none">
-    <option value="preguntas1.json">TEMÁTICA 1</option>
-    <option value="preguntas2.json">TEMÁTICA 2</option>
-    <option value="preguntas3.json">TEMÁTICA 3</option>
-  </select>
-</label>
-  <div id="waitingPlayers" style="display: none">
-    <h3>Jugadores en espera:</h3>
-    <ul id="playersList"></ul>
+    <select id="questionSelect" name="options" style="display: none">
+      <option value="preguntas1.json">TEMÁTICA 1</option>
+      <option value="preguntas2.json">TEMÁTICA 2</option>
+      <option value="preguntas3.json">TEMÁTICA 3</option>
+    </select>
+  </label>
+  <div  class="table-container" id="waitingPlayers" style="display: none">
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th>JUGADORES EN ESPERA</th>
+        </tr>
+      </thead>
+      <tbody id="playersList"></tbody>
+    </table>
   </div>
   <div id="game" style="display: none">
     <h2 id="question"></h2>
