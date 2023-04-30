@@ -27,6 +27,7 @@ function resetGame() {
   clearTimeout(intervalId);
   questionIndex = 0;
   gameStarted = false;
+  io.emit("resetGame"); // Agrega esta línea
 }
 
 let players = [];
@@ -34,10 +35,7 @@ let players = [];
 io.on("connection", (socket) => {
   socket.on("changeQuestionFile", (data) => {
     loadQuestions(data.filename);
-    if (gameStarted) {
-      resetGame();
-    }
-  });  
+  });
   //console.log("Un cliente se ha conectado.");
   let gameStarted = false;
   socket.on("join", ({ nickname }, callback) => {
@@ -119,7 +117,6 @@ function nextQuestion() {
   io.emit("question", { index: questionIndex, text: question.text, answers: question.answers, time: question.time });
   question.responded = 0;
   questionIndex++;
-
   clearTimeout(intervalId); // Limpiar el temporizador anterior
   intervalId = setTimeout(nextQuestion, question.time * 1000); // Establecer un nuevo temporizador basado en el tiempo de la pregunta actual
 }

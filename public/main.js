@@ -42,6 +42,7 @@ sendButton.addEventListener("click", () => {
 });
 
 function displayQuestion(question) {
+  answersElement.style.display = "flex";
   questionElement.textContent = question.text;
   answersElement.innerHTML = "";
 
@@ -65,6 +66,9 @@ socket.on("showStartButton", (data) => {
 
 socket.on("startGame", () => {
   waitingPlayers.style.display = "none";
+  answersElement.style.display = "flex";
+  document.getElementById("timer").style.display = "block";
+  resetGameUI();
   if (!window.gameStarted && players.length > 0) {
     window.gameStarted = true;
     startGame();
@@ -79,6 +83,8 @@ socket.on("question", (data) => {
   displayQuestion(data);
   enableAnswerButtons();
   liveScoreboard.style.display = "block";
+  document.getElementById("timer").style.display = "block";
+  startCountdown(data.time);
 });
 
 const pointsElement = document.getElementById("points");
@@ -99,6 +105,7 @@ socket.on("winners", (winners) => {
     questionSelect.style.display = "inline";
     labelSelect.style.display = "inline-block";
   }
+  document.getElementById("timer").style.display = "none";
   liveScoreboard.style.display = "none";
   document.getElementById("podium").style.display = "block";
   displayPodium(winners);
@@ -113,6 +120,7 @@ restartButton.addEventListener("click", () => {
   restartButton.style.display = "none";
   questionSelect.style.display = "none";
   labelSelect.style.display = "none";
+  clearInterval(countdownInterval);
   resetGameUI();
 });
 
@@ -156,7 +164,6 @@ function displayPodium(winners) {
 function resetGameUI() {
   window.gameStarted = false;
   questionElement.textContent = "";
-  answersElement.style.display = "flex";
   answersElement.innerHTML = "";
   pointsElement.textContent = "0";
   liveScoreboard.style.display = "none";
@@ -195,3 +202,21 @@ questionSelect.addEventListener("change", () => {
   const selectedFile = questionSelect.value;
   socket.emit("changeQuestionFile", { filename: selectedFile });
 });
+
+function updateTimeLeft(timeLeft) {
+  document.getElementById("timeLeft").textContent = timeLeft;
+}
+
+let countdownInterval;
+
+function startCountdown(time) {
+  clearInterval(countdownInterval);
+  updateTimeLeft(time);
+  countdownInterval = setInterval(() => {
+    time--;
+    updateTimeLeft(time);
+    if (time === 0) {
+      clearInterval(countdownInterval);
+    }
+  }, 1000);
+}
