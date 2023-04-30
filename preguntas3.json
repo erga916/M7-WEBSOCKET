@@ -1,0 +1,178 @@
+[
+    {
+        "text": "¿Cuál es el río más largo de África?",
+        "answers": [
+            {
+                "text": "Nilo",
+                "correct": true
+            },
+            {
+                "text": "Amazonas",
+                "correct": false
+            },
+            {
+                "text": "Yangtsé",
+                "correct": false
+            },
+            {
+                "text": "Misisipi",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Cuál es el país con la mayor extensión territorial del mundo?",
+        "answers": [
+            {
+                "text": "China",
+                "correct": false
+            },
+            {
+                "text": "Rusia",
+                "correct": true
+            },
+            {
+                "text": "Estados Unidos",
+                "correct": false
+            },
+            {
+                "text": "Canadá",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Quién escribió la obra 'La Odisea'?",
+        "answers": [
+            {
+                "text": "Homero",
+                "correct": true
+            },
+            {
+                "text": "Virgilio",
+                "correct": false
+            },
+            {
+                "text": "Dante Alighieri",
+                "correct": false
+            },
+            {
+                "text": "William Shakespeare",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Cuál es el animal más rápido del mundo?",
+        "answers": [
+            {
+                "text": "Guepardo",
+                "correct": true
+            },
+            {
+                "text": "Leopardo",
+                "correct": false
+            },
+            {
+                "text": "León",
+                "correct": false
+            },
+            {
+                "text": "Tigre",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿En qué país se encuentra la Torre Eiffel?",
+        "answers": [
+            {
+                "text": "Reino Unido",
+                "correct": false
+            },
+            {
+                "text": "Francia",
+                "correct": true
+            },
+            {
+                "text": "Italia",
+                "correct": false
+            },
+            {
+                "text": "Alemania",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Cuál es el quinto planeta del sistema solar?",
+        "answers": [
+            {
+                "text": "Júpiter",
+                "correct": false
+            },
+            {
+                "text": "Marte",
+                "correct": false
+            },
+            {
+                "text": "Venus",
+                "correct": false
+            },
+            {
+                "text": "Júpiter",
+                "correct": true
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Quién fue el fundador de Apple?",
+        "answers": [
+            {
+                "text": "Bill Gates",
+                "correct": false
+            },
+            {
+                "text": "Steve Jobs",
+                "correct": true
+            },
+            {
+                "text": "Mark Zuckerberg",
+                "correct": false
+            },
+            {
+                "text": "Larry Page",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Cuál es el elemento químico más abundante en el universo?",
+        "answers": [
+            {
+                "text": "Oxígeno",
+                "correct": false
+            },
+            {
+                "text": "Hidrógeno",
+                "correct": true
+            },
+            {
+                "text": "Carbono",
+                "correct": false
+            },
+            {
+                "text": "Hierro",
+                "correct": false
+            }
+        ],
+        "time": 5
+    }
+]

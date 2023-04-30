@@ -8,22 +8,40 @@ app.use(express.static("public"));
 
 let preguntas = [];
 
-fs.readFile("preguntas.json", (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  preguntas = JSON.parse(data).map((pregunta) => ({ ...pregunta, responded: 0 }));
-  console.log("Preguntas cargadas:", preguntas);
-});
+function loadQuestions(filename) {
+  fs.readFile(filename, (err, data) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    preguntas = JSON.parse(data).map((pregunta) => ({ ...pregunta, responded: 0 }));
+    //console.log("Preguntas cargadas:", preguntas);
+  });
+}
+
+function resetGame() {
+  players = players.map((player) => ({ ...player, score: 0 }));
+  io.emit("players", players);
+  io.emit("hidePodium");
+  io.emit("hideWaitingPlayers");
+  clearTimeout(intervalId);
+  questionIndex = 0;
+  gameStarted = false;
+}
 
 let players = [];
 
 io.on("connection", (socket) => {
-  console.log("Un cliente se ha conectado.");
+  socket.on("changeQuestionFile", (data) => {
+    loadQuestions(data.filename);
+    if (gameStarted) {
+      resetGame();
+    }
+  });  
+  //console.log("Un cliente se ha conectado.");
   let gameStarted = false;
   socket.on("join", ({ nickname }, callback) => {
-    console.log(`El jugador ${nickname} se ha unido.`);
+    //console.log(`El jugador ${nickname} se ha unido.`);
 
     if (players.some((player) => player.name === nickname)) {
       callback({ status: "error", message: "El nombre de usuario ya está en uso." });
@@ -32,6 +50,7 @@ io.on("connection", (socket) => {
       io.emit("players", players);
       if (players.length === 1) {
         socket.emit("showStartButton", { hostId: socket.id });
+        socket.emit("showQuestionSelect", { hostId: socket.id });
       }
       callback({ status: "success" });
     }
@@ -39,13 +58,14 @@ io.on("connection", (socket) => {
 
   socket.on("startGame", () => {
     if (!gameStarted && players.length > 0) {
+      io.emit("liveScoreboard", players); // Mueve esta línea aquí
       gameStarted = true;
       startGame();
     }
   });
 
   socket.on("answer", (data) => {
-    console.log(`El jugador ${data.nickname} ha respondido: ${data.answer}`);
+    //console.log(`El jugador ${data.nickname} ha respondido: ${data.answer}`);
     let player = players.find((p) => p.name === data.nickname);
     if (player) {
       let question = preguntas[data.question];
@@ -55,16 +75,16 @@ io.on("connection", (socket) => {
         io.emit("players", players); // Emit the players event to update the score
         io.emit("liveScoreboard", players);
       }
-  
+
       question.responded++;
       if (question.responded === players.length) {
         nextQuestion();
       }
     }
-  });  
+  });
 
   socket.on("disconnect", () => {
-    console.log(`El jugador ${socket.id} se ha desconectado.`);
+    //console.log(`El jugador ${socket.id} se ha desconectado.`);
     players = players.filter((p) => p.id !== socket.id);
     io.emit("players", players);
   });
@@ -82,8 +102,11 @@ let questionIndex = 0;
 let intervalId;
 
 function startGame() {
+  io.emit("hidePodium");
+  io.emit("hideWaitingPlayers"); // Agrega esta línea
   questionIndex = 0;
   nextQuestion();
+  io.emit("liveScoreboard", players);
 }
 
 function nextQuestion() {
@@ -102,7 +125,7 @@ function nextQuestion() {
 }
 
 function endGame() {
-  console.log("El juego ha terminado");
+  //console.log("El juego ha terminado");
   players.sort((a, b) => b.score - a.score);
   let winners = players.slice(0, 3); // Aquí toma los 3 primeros jugadores después de ordenar
   io.emit("winners", winners);
@@ -111,3 +134,5 @@ function endGame() {
 httpServer.listen(3000, () => {
   console.log("Servidor escuchando en http://localhost:3000");
 });
+
+loadQuestions("preguntas1.json");
