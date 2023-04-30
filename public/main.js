@@ -93,7 +93,7 @@ socket.on("players", (players) => {
 
 socket.on("winners", (winners) => {
   questionElement.textContent = "El juego ha terminado";
-  answersElement.innerHTML = "Ganadores: " + winners.map(w => w.name).join(", ");
+  answersElement.style.display = "none";
   if (socket.id === hostId) {
     restartButton.style.display = "block";
     questionSelect.style.display = "inline";
