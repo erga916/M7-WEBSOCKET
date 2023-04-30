@@ -309,8 +309,6 @@ table.table-dark.table-striped tbody tr:nth-of-type(odd) {
     background-color: #a48be2;
 }
 
-/* --- Estilos del podio --- */
-
 #podium {
     background-color: #9E48FF;
     padding: 15px;
@@ -342,6 +340,7 @@ table.table-dark.table-striped tbody tr:nth-of-type(odd) {
     font-size: 1.2em;
     padding: 10px 0;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 #top3Players li:nth-child(1) {
@@ -354,12 +353,18 @@ table.table-dark.table-striped tbody tr:nth-of-type(odd) {
     background-color: #C0C0C0;
     color: #fff;
     padding-left: 30px;
+    width: 60%;
 }
 
 #top3Players li:nth-child(3) {
     background-color: #CD7F32;
     color: #fff;
     padding-left: 45px;
+    width: 35%;
 }
 
-/* --- Fin estilos del podio --- */
+#timer {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bold;
+}
