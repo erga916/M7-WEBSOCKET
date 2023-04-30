@@ -25,6 +25,10 @@ h2 {
 }
 
 #restartButton {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
     margin-top: 20px;
 }
 
@@ -308,53 +312,53 @@ table.table-dark.table-striped tbody tr:nth-of-type(odd) {
 /* --- Estilos del podio --- */
 
 #podium {
-  background-color: #9E48FF;
-  padding: 15px;
-  border-radius: .3em;
-  width: 25%;
-  margin: auto;
-  margin-top: 25px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #9E48FF;
+    padding: 15px;
+    border-radius: .3em;
+    width: 25%;
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #podium h2 {
-  color: whitesmoke;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-top: -5px;
+    color: whitesmoke;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: -5px;
 }
 
 #top3Players {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #top3Players li {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2em;
-  padding: 10px 0;
-  text-align: left;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 0;
+    text-align: left;
 }
 
 #top3Players li:nth-child(1) {
-  background-color: #FFD700;
-  color: #000;
-  padding-left: 15px;
+    background-color: #FFD700;
+    color: #000;
+    padding-left: 15px;
 }
 
 #top3Players li:nth-child(2) {
-  background-color: #C0C0C0;
-  color: #000;
-  padding-left: 30px;
+    background-color: #C0C0C0;
+    color: #000;
+    padding-left: 30px;
 }
 
 #top3Players li:nth-child(3) {
-  background-color: #CD7F32;
-  color: #000;
-  padding-left: 45px;
+    background-color: #CD7F32;
+    color: #000;
+    padding-left: 45px;
 }
 
 /* --- Fin estilos del podio --- */
