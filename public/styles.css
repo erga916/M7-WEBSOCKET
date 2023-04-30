@@ -1,0 +1,365 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: #d4c6e3;
+}
+
+h2 {
+    color: #9E48FF;
+}
+
+#game {
+    margin-top: 30px;
+}
+
+#answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#restartButton {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    margin-top: 20px;
+}
+
+button {
+    --color: #9E48FF;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 2px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    margin-left: 10px;
+    z-index: 1;
+}
+
+#startButton {
+    margin: 5% 0 0 0;
+}
+
+#sendButton {
+    color: #B39CD0;
+}
+
+#sendButton:hover {
+    color: white;
+}
+
+#sendButton::before,
+#sendButton::after {
+    background-color: #B39CD0;
+}
+
+button::before,
+button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+button::before {
+    top: -1em;
+    left: -1em;
+}
+
+button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+button:hover::before,
+button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+button:hover {
+    color: white;
+}
+
+button:active {
+    filter: brightness(.8);
+}
+
+.inputbox {
+    position: relative;
+    width: 196px;
+}
+
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.inputbox span {
+    top: 10%;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: grey;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inputbox input:valid~span,
+.inputbox input:focus~span {
+    color: #9E48FF;
+    transform: translateX(-10px) translateY(-40px);
+    font-size: 1em;
+}
+
+.inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #B39CD0;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputbox input:valid~i,
+.inputbox input:focus~i {
+    height: 44px;
+}
+
+.input-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    margin: 2% 0 0 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
+}
+
+label select:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+label::after {
+    content: '▼';
+    position: absolute;
+    width: 37px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    right: 2px;
+    bottom: 8px;
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+label::before {
+    content: '';
+    right: 2px;
+    top: 2px;
+    width: 37px;
+    height: 36px;
+    background: #B39CD0;
+    position: absolute;
+    pointer-events: none;
+    display: block;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+label select {
+    position: relative;
+    width: 250px;
+    appearance: none;
+    background: #715fb6;
+    color: #B39CD0;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 9px;
+    margin: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 40px;
+    border: 1px solid;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container {
+    margin: auto;
+    margin-top: 5% !important;
+    width: 25%;
+    border-radius: .3em;
+    overflow: hidden;
+}
+
+table.table-dark {
+    background-color: #715fb6;
+    color: #fff;
+}
+
+table.table-dark th,
+table.table-dark td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #AB66E3;
+}
+
+table.table-dark thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #AB66E3;
+}
+
+table.table-dark tbody+tbody {
+    border-top: 2px solid #AB66E3;
+}
+
+table.table-dark.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #CB8CFF;
+}
+
+.live-score-board {
+    background-color: #715fb6;
+    padding: 15px;
+    border-radius: .3em;
+    width: 25%;
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.live-score-board h3 {
+    color: whitesmoke;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+
+.live-score-board ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.live-score-board li {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 5px 0;
+}
+
+.live-score-board li:nth-child(odd) {
+    background-color: #8c78d8;
+}
+
+.live-score-board li:nth-child(even) {
+    background-color: #a48be2;
+}
+
+/* --- Estilos del podio --- */
+
+#podium {
+    background-color: #9E48FF;
+    padding: 15px;
+    border-radius: .3em;
+    width: 25%;
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#podium h3 {
+    color: whitesmoke;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+
+#top3Players {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#top3Players li {
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 0;
+    text-align: left;
+}
+
+#top3Players li:nth-child(1) {
+    background-color: #FFD700;
+    color: #fff;
+    padding-left: 15px;
+}
+
+#top3Players li:nth-child(2) {
+    background-color: #C0C0C0;
+    color: #fff;
+    padding-left: 30px;
+}
+
+#top3Players li:nth-child(3) {
+    background-color: #CD7F32;
+    color: #fff;
+    padding-left: 45px;
+}
+
+/* --- Fin estilos del podio --- */

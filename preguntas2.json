@@ -1,0 +1,178 @@
+[
+    {
+        "text": "¿En qué año se fundó la ciudad de Nueva York?",
+        "answers": [
+            {
+                "text": "1609",
+                "correct": false
+            },
+            {
+                "text": "1624",
+                "correct": true
+            },
+            {
+                "text": "1682",
+                "correct": false
+            },
+            {
+                "text": "1746",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Cuál es el océano más grande del mundo?",
+        "answers": [
+            {
+                "text": "Océano Atlántico",
+                "correct": false
+            },
+            {
+                "text": "Océano Índico",
+                "correct": false
+            },
+            {
+                "text": "Océano Pacífico",
+                "correct": true
+            },
+            {
+                "text": "Océano Ártico",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Quién escribió el libro 'El Quijote'?",
+        "answers": [
+            {
+                "text": "Federico García Lorca",
+                "correct": false
+            },
+            {
+                "text": "Miguel de Cervantes",
+                "correct": true
+            },
+            {
+                "text": "Gabriel García Márquez",
+                "correct": false
+            },
+            {
+                "text": "Jorge Luis Borges",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Cuál es el metal más caro del mundo?",
+        "answers": [
+            {
+                "text": "Oro",
+                "correct": false
+            },
+            {
+                "text": "Platino",
+                "correct": false
+            },
+            {
+                "text": "Paladio",
+                "correct": false
+            },
+            {
+                "text": "Rodio",
+                "correct": true
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Cuál es el país con más islas en el mundo?",
+        "answers": [
+            {
+                "text": "Filipinas",
+                "correct": false
+            },
+            {
+                "text": "Indonesia",
+                "correct": true
+            },
+            {
+                "text": "Japón",
+                "correct": false
+            },
+            {
+                "text": "Maldivas",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Quién fue el primer hombre en pisar la luna?",
+        "answers": [
+            {
+                "text": "Neil Armstrong",
+                "correct": true
+            },
+            {
+                "text": "Buzz Aldrin",
+                "correct": false
+            },
+            {
+                "text": "Michael Collins",
+                "correct": false
+            },
+            {
+                "text": "Yuri Gagarin",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿En qué continente se encuentra Egipto?",
+        "answers": [
+            {
+                "text": "África",
+                "correct": true
+            },
+            {
+                "text": "Asia",
+                "correct": false
+            },
+            {
+                "text": "Europa",
+                "correct": false
+            },
+            {
+                "text": "América",
+                "correct": false
+            }
+        ],
+        "time": 5
+    },
+    {
+        "text": "¿Quién inventó el teléfono?",
+        "answers": [
+            {
+                "text": "Thomas Edison",
+                "correct": false
+            },
+            {
+                "text": "Alexander Graham Bell",
+                "correct": true
+            },
+            {
+                "text": "Nikola Tesla",
+                "correct": false
+            },
+            {
+                "text": "Marconi",
+                "correct": false
+            }
+        ],
+        "time": 5
+    }
+]

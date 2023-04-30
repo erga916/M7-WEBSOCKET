@@ -1,0 +1,178 @@
+[
+  {
+    "text": "¿Cuál es la capital de España?",
+    "answers": [
+      {
+        "text": "Madrid",
+        "correct": true
+      },
+      {
+        "text": "Barcelona",
+        "correct": false
+      },
+      {
+        "text": "Valencia",
+        "correct": false
+      },
+      {
+        "text": "Sevilla",
+        "correct": false
+      }
+    ],
+    "time": 5
+  },
+  {
+    "text": "¿Cuál es la fórmula química del agua?",
+    "answers": [
+      {
+        "text": "H2O",
+        "correct": true
+      },
+      {
+        "text": "CO2",
+        "correct": false
+      },
+      {
+        "text": "CH4",
+        "correct": false
+      },
+      {
+        "text": "O2",
+        "correct": false
+      }
+    ],
+    "time": 5
+  },
+  {
+    "text": "¿De que color es el caballo blanco de Santiago?",
+    "answers": [
+      {
+        "text": "Verde",
+        "correct": false
+      },
+      {
+        "text": "Blanco",
+        "correct": true
+      },
+      {
+        "text": "Rojo",
+        "correct": false
+      },
+      {
+        "text": "Púrpura",
+        "correct": false
+      }
+    ],
+    "time": 5
+  },
+  {
+    "text": "¿Cuál es el río más largo del mundo?",
+    "answers": [
+      {
+        "text": "Nilo",
+        "correct": false
+      },
+      {
+        "text": "Amazonas",
+        "correct": true
+      },
+      {
+        "text": "Yangtsé",
+        "correct": false
+      },
+      {
+        "text": "Misisipi",
+        "correct": false
+      }
+    ],
+    "time": 5
+  },
+  {
+    "text": "¿Cuál es el país más poblado del mundo?",
+    "answers": [
+      {
+        "text": "India",
+        "correct": false
+      },
+      {
+        "text": "Estados Unidos",
+        "correct": false
+      },
+      {
+        "text": "China",
+        "correct": true
+      },
+      {
+        "text": "Indonesia",
+        "correct": false
+      }
+    ],
+    "time": 5
+  },
+  {
+    "text": "¿Cuál es el planeta más grande del sistema solar?",
+    "answers": [
+      {
+        "text": "Saturno",
+        "correct": false
+      },
+      {
+        "text": "Júpiter",
+        "correct": true
+      },
+      {
+        "text": "Urano",
+        "correct": false
+      },
+      {
+        "text": "Neptuno",
+        "correct": false
+      }
+    ],
+    "time": 5
+  },
+  {
+    "text": "¿Cuál es la montaña más alta del mundo?",
+    "answers": [
+      {
+        "text": "K2",
+        "correct": false
+      },
+      {
+        "text": "Monte Everest",
+        "correct": true
+      },
+      {
+        "text": "Kangchenjunga",
+        "correct": false
+      },
+      {
+        "text": "Lhotse",
+        "correct": false
+      }
+    ],
+    "time": 5
+  },
+  {
+    "text": "¿Quién pintó la Mona Lisa?",
+    "answers": [
+      {
+        "text": "Leonardo da Vinci",
+        "correct": true
+      },
+      {
+        "text": "Miguel Ángel",
+        "correct": false
+      },
+      {
+        "text": "Rafael",
+        "correct": false
+      },
+      {
+        "text": "Pablo Picasso",
+        "correct": false
+      }
+    ],
+    "time": 5
+  }
+]
