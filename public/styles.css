@@ -321,7 +321,7 @@ table.table-dark.table-striped tbody tr:nth-of-type(odd) {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#podium h2 {
+#podium h3 {
     color: whitesmoke;
     font-size: 1.5em;
     font-weight: bold;
@@ -337,6 +337,7 @@ table.table-dark.table-striped tbody tr:nth-of-type(odd) {
 
 #top3Players li {
     color: #fff;
+    border-radius: 10px;
     font-weight: bold;
     font-size: 1.2em;
     padding: 10px 0;
@@ -345,19 +346,19 @@ table.table-dark.table-striped tbody tr:nth-of-type(odd) {
 
 #top3Players li:nth-child(1) {
     background-color: #FFD700;
-    color: #000;
+    color: #fff;
     padding-left: 15px;
 }
 
 #top3Players li:nth-child(2) {
     background-color: #C0C0C0;
-    color: #000;
+    color: #fff;
     padding-left: 30px;
 }
 
 #top3Players li:nth-child(3) {
     background-color: #CD7F32;
-    color: #000;
+    color: #fff;
     padding-left: 45px;
 }
 

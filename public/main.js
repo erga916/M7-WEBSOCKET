@@ -92,7 +92,7 @@ socket.on("players", (players) => {
 });
 
 socket.on("winners", (winners) => {
-  questionElement.textContent = "El juego ha terminado";
+  questionElement.textContent = "¡FIN DE LA PARTIDA!";
   answersElement.style.display = "none";
   if (socket.id === hostId) {
     restartButton.style.display = "block";
@@ -156,6 +156,7 @@ function displayPodium(winners) {
 function resetGameUI() {
   window.gameStarted = false;
   questionElement.textContent = "";
+  answersElement.style.display = "flex";
   answersElement.innerHTML = "";
   pointsElement.textContent = "0";
   liveScoreboard.style.display = "none";
