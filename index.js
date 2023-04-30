@@ -19,17 +19,6 @@ function loadQuestions(filename) {
   });
 }
 
-function resetGame() {
-  players = players.map((player) => ({ ...player, score: 0 }));
-  io.emit("players", players);
-  io.emit("hidePodium");
-  io.emit("hideWaitingPlayers");
-  clearTimeout(intervalId);
-  questionIndex = 0;
-  gameStarted = false;
-  io.emit("resetGame"); // Agrega esta línea
-}
-
 let players = [];
 
 io.on("connection", (socket) => {
@@ -40,7 +29,6 @@ io.on("connection", (socket) => {
   let gameStarted = false;
   socket.on("join", ({ nickname }, callback) => {
     //console.log(`El jugador ${nickname} se ha unido.`);
-
     if (players.some((player) => player.name === nickname)) {
       callback({ status: "error", message: "El nombre de usuario ya está en uso." });
     } else {
@@ -56,7 +44,7 @@ io.on("connection", (socket) => {
 
   socket.on("startGame", () => {
     if (!gameStarted && players.length > 0) {
-      io.emit("liveScoreboard", players); // Mueve esta línea aquí
+      io.emit("liveScoreboard", players);
       gameStarted = true;
       startGame();
     }
@@ -70,7 +58,7 @@ io.on("connection", (socket) => {
       let answer = question.answers[data.answer];
       if (answer.correct) {
         player.score += question.time;
-        io.emit("players", players); // Emit the players event to update the score
+        io.emit("players", players);
         io.emit("liveScoreboard", players);
       }
 
@@ -88,8 +76,8 @@ io.on("connection", (socket) => {
   });
 
   socket.on("restart", () => {
-    players = players.map(player => ({ ...player, score: 0 })); // Reiniciar los puntos de cada jugador
-    io.emit("players", players); // Actualizar la información de los jugadores en el cliente
+    players = players.map(player => ({ ...player, score: 0 }));
+    io.emit("players", players);
     if (players.length > 0) {
       startGame();
     }
@@ -101,7 +89,7 @@ let intervalId;
 
 function startGame() {
   io.emit("hidePodium");
-  io.emit("hideWaitingPlayers"); // Agrega esta línea
+  io.emit("hideWaitingPlayers");
   questionIndex = 0;
   nextQuestion();
   io.emit("liveScoreboard", players);
@@ -117,14 +105,15 @@ function nextQuestion() {
   io.emit("question", { index: questionIndex, text: question.text, answers: question.answers, time: question.time });
   question.responded = 0;
   questionIndex++;
-  clearTimeout(intervalId); // Limpiar el temporizador anterior
-  intervalId = setTimeout(nextQuestion, question.time * 1000); // Establecer un nuevo temporizador basado en el tiempo de la pregunta actual
+
+  clearTimeout(intervalId);
+  intervalId = setTimeout(nextQuestion, question.time * 1000);
 }
 
 function endGame() {
   //console.log("El juego ha terminado");
   players.sort((a, b) => b.score - a.score);
-  let winners = players.slice(0, 3); // Aquí toma los 3 primeros jugadores después de ordenar
+  let winners = players.slice(0, 3);
   io.emit("winners", winners);
 }
 

@@ -1,5 +1,4 @@
 const socket = io();
-
 const sendButton = document.getElementById("sendButton");
 const nicknameInput = document.getElementById("nicknameInput");
 const game = document.getElementById("game");
@@ -142,8 +141,8 @@ function updateLiveScoreboard(players) {
   const liveScores = document.getElementById("liveScores");
   liveScores.innerHTML = "";
   players
-    .slice() // Crea una copia de la lista de jugadores para no modificar la lista original
-    .sort((a, b) => b.score - a.score) // Ordena las puntuaciones de mayor a menor
+    .slice()
+    .sort((a, b) => b.score - a.score)
     .forEach((player) => {
       const li = document.createElement("li");
       li.textContent = `${player.name} ➜ ${player.score}`;
@@ -168,7 +167,7 @@ function resetGameUI() {
   pointsElement.textContent = "0";
   liveScoreboard.style.display = "none";
   podium.style.display = "none";
-  updateLiveScoreboard(players); // Añade esta línea
+  updateLiveScoreboard(players);
 }
 
 socket.on("hidePodium", () => {

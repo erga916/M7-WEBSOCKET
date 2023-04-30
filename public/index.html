@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>BrainBlitz</title>
+  <title>SOCKET QUIZ</title>
   <link href="/styles.css" rel="stylesheet">
 </head>
 
@@ -10,13 +10,13 @@
   <div class="input-container">
     <div class="inputbox">
       <input id="nicknameInput" required="required" type="text">
-      <span id="spanColor">Username</span>
+      <span id="spanColor">USERNAME</span>
       <i id="inputColor"></i>
     </div>
     <br>
-    <button id="sendButton">Enviar</button>
+    <button id="sendButton">ENVIAR</button>
   </div>
-  <button id="startButton" style="display: none">Iniciar juego</button>
+  <button id="startButton" style="display: none">INICIAR</button>
   <br>
   <label id="labelSelect" style="display: none">
     <select id="questionSelect" name="options" style="display: none">
@@ -38,7 +38,7 @@
   <div id="game" style="display: none">
     <h2 id="question"></h2>
     <div id="answers"></div>
-    <div id="timer" style="display: none">Tiempo restante: <span id="timeLeft"></span></div>
+    <div id="timer" style="display: none">TIEMPO RESTANTE: <span id="timeLeft"></span></div>
     <div class="live-score-board" id="liveScoreboard" style="display: none">
       <h3>MARCADOR</h3>
       <ul id="liveScores"></ul>
@@ -48,7 +48,7 @@
       <h3>PODIO</h3>
       <ul id="top3Players"></ul>
     </div>
-    <button id="restartButton" style="display: none">Reiniciar juego</button>
+    <button id="restartButton" style="display: none">REINICIAR</button>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.min.js"></script>
   <script src="main.js"></script>
