@@ -19,7 +19,7 @@
                 "correct": false
             }
         ],
-        "time": 5
+        "time": 10
     },
     {
         "text": "¿Cuál es el océano más grande del mundo?",
@@ -41,7 +41,7 @@
                 "correct": false
             }
         ],
-        "time": 5
+        "time": 10
     },
     {
         "text": "¿Quién escribió el libro 'El Quijote'?",
@@ -63,7 +63,7 @@
                 "correct": false
             }
         ],
-        "time": 5
+        "time": 10
     },
     {
         "text": "¿Cuál es el metal más caro del mundo?",
@@ -85,7 +85,7 @@
                 "correct": true
             }
         ],
-        "time": 5
+        "time": 10
     },
     {
         "text": "¿Cuál es el país con más islas en el mundo?",
@@ -107,7 +107,7 @@
                 "correct": false
             }
         ],
-        "time": 5
+        "time": 10
     },
     {
         "text": "¿Quién fue el primer hombre en pisar la luna?",
@@ -129,7 +129,7 @@
                 "correct": false
             }
         ],
-        "time": 5
+        "time": 10
     },
     {
         "text": "¿En qué continente se encuentra Egipto?",
@@ -151,7 +151,7 @@
                 "correct": false
             }
         ],
-        "time": 5
+        "time": 10
     },
     {
         "text": "¿Quién inventó el teléfono?",
@@ -173,6 +173,6 @@
                 "correct": false
             }
         ],
-        "time": 5
+        "time": 10
     }
 ]
