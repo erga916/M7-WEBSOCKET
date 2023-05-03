@@ -15,30 +15,30 @@
                 "correct": false
             },
             {
-                "text": "19210",
+                "text": "1920",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Cuál es el estadio del Fútbol Club Barcelona?",
+        "text": "¿Cuál es el estadio actual del Fútbol Club Barcelona?",
         "answers": [
             {
-                "text": "Estadio Santiago Bernabéu",
+                "text": "Estadio Olímpico Lluís Companys",
                 "correct": false
             },
             {
-                "text": "Estadio Wanda Metropolitano",
+                "text": "Wanda Metropolitano",
                 "correct": false
             },
             {
-                "text": "Estadio Camp Nou",
+                "text": "Camp Nou",
+                "correct": false
+            },
+            {
+                "text": "Spotify Camp Nou",
                 "correct": true
-            },
-            {
-                "text": "Estadio Mestalla",
-                "correct": false
             }
         ],
         "time": 10
@@ -110,22 +110,22 @@
         "time": 10
     },
     {
-        "text": "¿Cuál es el himno oficial del Fútbol Club Barcelona?",
+        "text": "¿Cuándo fue el debut de Lionel Andrés Messi?",
         "answers": [
             {
-                "text": "Hala Madrid",
+                "text": "19 de Septiembre de 2001",
                 "correct": false
             },
             {
-                "text": "Cant del Barça",
+                "text": "16 de Noviembre de 2003",
                 "correct": true
             },
             {
-                "text": "Marcha Granadera",
+                "text": "18 de Octubre de 2003",
                 "correct": false
             },
             {
-                "text": "El cant dels ocells",
+                "text": "16 de Noviembre de 2002",
                 "correct": false
             }
         ],
@@ -139,15 +139,15 @@
                 "correct": true
             },
             {
-                "text": "Sandro Rosell",
+                "text": "Josep Suñol",
                 "correct": false
             },
             {
-                "text": "Josep Maria Bartomeu",
+                "text": "Josep Maria Bartomeu(NOBITA)",
                 "correct": false
             },
             {
-                "text": "Joan Laporta",
+                "text": "Josep Soler",
                 "correct": false
             }
         ],
@@ -161,7 +161,7 @@
                 "correct": false
             },
             {
-                "text": "Valencia CF",
+                "text": "RCD Espanyol",
                 "correct": false
             },
             {
