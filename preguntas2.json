@@ -113,7 +113,7 @@
         "text": "¿En qué año fue lanzado el primer videojuego de la serie 'Pokémon'?",
         "answers": [
             {
-                "text": "19910",
+                "text": "1910",
                 "correct": false
             },
             {
@@ -220,22 +220,22 @@
         "time": 10
     },
     {
-        "text": "¿Cuál es el nombre de la princesa que Mario rescata en la mayoría de los juegos de la serie 'Super Mario'?",
+        "text": "¿Cuál es el videojuego más caro producido hasta la fecha?",
         "answers": [
             {
-                "text": "Zelda",
+                "text": "Fortnite",
                 "correct": false
             },
             {
-                "text": "Samus",
+                "text": "Pokémon",
                 "correct": false
             },
             {
-                "text": "Peach",
+                "text": "Grand Theft Auto V",
                 "correct": true
             },
             {
-                "text": "Daisy",
+                "text": "Minecraft",
                 "correct": false
             }
         ],

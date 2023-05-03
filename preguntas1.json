@@ -198,22 +198,22 @@
     "time": 10
   },
   {
-    "text": "¿Qué tecnología de propulsión utilizan los vehículos híbridos?",
+    "text": "¿Qué motor de propulsión utiliza el modelo Ferrari Infernus?",
     "answers": [
       {
-        "text": "Combustión interna solamente",
-        "correct": false
-      },
-      {
-        "text": "Eléctrica solamente",
-        "correct": false
-      },
-      {
-        "text": "Combustión interna y eléctrica",
+        "text": "V8",
         "correct": true
       },
       {
-        "text": "Celdas de hidrógeno",
+        "text": "W16",
+        "correct": false
+      },
+      {
+        "text": "V12",
+        "correct": false
+      },
+      {
+        "text": "V10",
         "correct": false
       }
     ],
