@@ -1,176 +1,220 @@
 [
     {
-        "text": "¿Cuál es el río más largo de África?",
+        "text": "¿En qué año se fundó el Fútbol Club Barcelona?",
         "answers": [
             {
-                "text": "Nilo",
+                "text": "1899",
                 "correct": true
             },
             {
-                "text": "Amazonas",
+                "text": "1902",
                 "correct": false
             },
             {
-                "text": "Yangtsé",
+                "text": "1910",
                 "correct": false
             },
             {
-                "text": "Misisipi",
+                "text": "19210",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Cuál es el país con la mayor extensión territorial del mundo?",
+        "text": "¿Cuál es el estadio del Fútbol Club Barcelona?",
         "answers": [
             {
-                "text": "China",
+                "text": "Estadio Santiago Bernabéu",
                 "correct": false
             },
             {
-                "text": "Rusia",
+                "text": "Estadio Wanda Metropolitano",
+                "correct": false
+            },
+            {
+                "text": "Estadio Camp Nou",
                 "correct": true
             },
             {
-                "text": "Estados Unidos",
-                "correct": false
-            },
-            {
-                "text": "Canadá",
+                "text": "Estadio Mestalla",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Quién escribió la obra 'La Odisea'?",
+        "text": "¿Quién es conocido como el máximo goleador histórico del Fútbol Club Barcelona?",
         "answers": [
             {
-                "text": "Homero",
+                "text": "Ronaldinho",
+                "correct": false
+            },
+            {
+                "text": "Samuel Eto'o",
+                "correct": false
+            },
+            {
+                "text": "Lionel Messi",
                 "correct": true
             },
             {
-                "text": "Virgilio",
-                "correct": false
-            },
-            {
-                "text": "Dante Alighieri",
-                "correct": false
-            },
-            {
-                "text": "William Shakespeare",
+                "text": "Rivaldo",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Cuál es el animal más rápido del mundo?",
+        "text": "¿Qué jugador holandés es considerado una leyenda del Fútbol Club Barcelona y ha sido entrenador del equipo?",
         "answers": [
             {
-                "text": "Guepardo",
+                "text": "Ruud Gullit",
+                "correct": false
+            },
+            {
+                "text": "Johan Cruyff",
                 "correct": true
             },
             {
-                "text": "Leopardo",
+                "text": "Frank Rijkaard",
                 "correct": false
             },
             {
-                "text": "León",
-                "correct": false
-            },
-            {
-                "text": "Tigre",
+                "text": "Dennis Bergkamp",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿En qué país se encuentra la Torre Eiffel?",
+        "text": "¿Cuál es el apodo del Fútbol Club Barcelona?",
         "answers": [
             {
-                "text": "Reino Unido",
+                "text": "Los Blancos",
                 "correct": false
             },
             {
-                "text": "Francia",
+                "text": "Los Colchoneros",
+                "correct": false
+            },
+            {
+                "text": "Los Blaugranas",
                 "correct": true
             },
             {
-                "text": "Italia",
-                "correct": false
-            },
-            {
-                "text": "Alemania",
+                "text": "Los Ches",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Cuál es el quinto planeta del sistema solar?",
+        "text": "¿Cuál es el himno oficial del Fútbol Club Barcelona?",
         "answers": [
             {
-                "text": "Júpiter",
+                "text": "Hala Madrid",
                 "correct": false
             },
             {
-                "text": "Marte",
-                "correct": false
-            },
-            {
-                "text": "Venus",
-                "correct": false
-            },
-            {
-                "text": "Júpiter",
-                "correct": true
-            }
-        ],
-        "time": 10
-    },
-    {
-        "text": "¿Quién fue el fundador de Apple?",
-        "answers": [
-            {
-                "text": "Bill Gates",
-                "correct": false
-            },
-            {
-                "text": "Steve Jobs",
+                "text": "Cant del Barça",
                 "correct": true
             },
             {
-                "text": "Mark Zuckerberg",
+                "text": "Marcha Granadera",
                 "correct": false
             },
             {
-                "text": "Larry Page",
+                "text": "El cant dels ocells",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Cuál es el elemento químico más abundante en el universo?",
+        "text": "¿Quién fue el primer presidente del Fútbol Club Barcelona?",
         "answers": [
             {
-                "text": "Oxígeno",
-                "correct": false
-            },
-            {
-                "text": "Hidrógeno",
+                "text": "Joan Gamper",
                 "correct": true
             },
             {
-                "text": "Carbono",
+                "text": "Sandro Rosell",
                 "correct": false
             },
             {
-                "text": "Hierro",
+                "text": "Josep Maria Bartomeu",
                 "correct": false
+            },
+            {
+                "text": "Joan Laporta",
+                "correct": false
+            }
+        ],
+        "time": 10
+    },
+    {
+        "text": "¿Qué equipo es el principal rival del Fútbol Club Barcelona?",
+        "answers": [
+            {
+                "text": "Atlético de Madrid",
+                "correct": false
+            },
+            {
+                "text": "Valencia CF",
+                "correct": false
+            },
+            {
+                "text": "Real Madrid",
+                "correct": true
+            },
+            {
+                "text": "Sevilla FC",
+                "correct": false
+            }
+        ],
+        "time": 10
+    },
+    {
+        "text": "¿Qué entrenador llevó al Fútbol Club Barcelona a ganar su primer triplete en la temporada 2008-2009?",
+        "answers": [
+            {
+                "text": "Frank Rijkaard",
+                "correct": false
+            },
+            {
+                "text": "Pep Guardiola",
+                "correct": true
+            },
+            {
+                "text": "Luis Enrique",
+                "correct": false
+            },
+            {
+                "text": "Tito Vilanova",
+                "correct": false
+            }
+        ],
+        "time": 10
+    },
+    {
+        "text": "¿Qué jugador brasileño fue el protagonista de la famosa remontada del Fútbol Club Barcelona contra el Paris Saint-Germain en la Liga de Campeones de la UEFA en 2017?",
+        "answers": [
+            {
+                "text": "Ronaldinho",
+                "correct": false
+            },
+            {
+                "text": "Rivaldo",
+                "correct": false
+            },
+            {
+                "text": "Ronaldo Nazário",
+                "correct": false
+            },
+            {
+                "text": "Neymar",
+                "correct": true
             }
         ],
         "time": 10

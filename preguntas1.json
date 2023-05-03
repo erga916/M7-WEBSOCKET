@@ -1,175 +1,219 @@
 [
   {
-    "text": "¿Cuál es la capital de España?",
+    "text": "¿Cuál es el fabricante de automóviles alemán conocido por sus vehículos deportivos de lujo?",
     "answers": [
       {
-        "text": "Madrid",
+        "text": "Porsche",
         "correct": true
       },
       {
-        "text": "Barcelona",
+        "text": "Ford",
         "correct": false
       },
       {
-        "text": "Valencia",
+        "text": "Honda",
         "correct": false
       },
       {
-        "text": "Sevilla",
+        "text": "Fiat",
         "correct": false
       }
     ],
     "time": 10
   },
   {
-    "text": "¿Cuál es la fórmula química del agua?",
+    "text": "¿Cuál es el nombre del modelo de coche eléctrico fabricado por Tesla?",
     "answers": [
       {
-        "text": "H2O",
+        "text": "Prius",
+        "correct": false
+      },
+      {
+        "text": "Leaf",
+        "correct": false
+      },
+      {
+        "text": "Model S",
         "correct": true
       },
       {
-        "text": "CO2",
-        "correct": false
-      },
-      {
-        "text": "CH4",
-        "correct": false
-      },
-      {
-        "text": "O2",
+        "text": "i3",
         "correct": false
       }
     ],
     "time": 10
   },
   {
-    "text": "¿De que color es el caballo blanco de Santiago?",
+    "text": "¿Cuál es la competición de automovilismo más prestigiosa a nivel mundial?",
     "answers": [
       {
-        "text": "Verde",
+        "text": "NASCAR",
         "correct": false
       },
       {
-        "text": "Blanco",
+        "text": "IndyCar",
+        "correct": false
+      },
+      {
+        "text": "Fórmula 1",
         "correct": true
       },
       {
-        "text": "Rojo",
-        "correct": false
-      },
-      {
-        "text": "Púrpura",
+        "text": "Rally Dakar",
         "correct": false
       }
     ],
     "time": 10
   },
   {
-    "text": "¿Cuál es el río más largo del mundo?",
+    "text": "¿Cuál es el nombre de la carrera de resistencia de 24 horas celebrada en Francia?",
     "answers": [
       {
-        "text": "Nilo",
+        "text": "24 Horas de Spa",
         "correct": false
       },
       {
-        "text": "Amazonas",
+        "text": "12 Horas de Sebring",
+        "correct": false
+      },
+      {
+        "text": "24 Horas de Le Mans",
         "correct": true
       },
       {
-        "text": "Yangtsé",
-        "correct": false
-      },
-      {
-        "text": "Misisipi",
+        "text": "24 Horas de Nürburgring",
         "correct": false
       }
     ],
     "time": 10
   },
   {
-    "text": "¿Cuál es el país más poblado del mundo?",
+    "text": "¿Qué marca de automóviles es conocida por sus modelos Veyron y Chiron?",
     "answers": [
       {
-        "text": "India",
+        "text": "Ferrari",
         "correct": false
       },
       {
-        "text": "Estados Unidos",
+        "text": "Lamborghini",
         "correct": false
       },
       {
-        "text": "China",
+        "text": "Bugatti",
         "correct": true
       },
       {
-        "text": "Indonesia",
+        "text": "Koenigsegg",
         "correct": false
       }
     ],
     "time": 10
   },
   {
-    "text": "¿Cuál es el planeta más grande del sistema solar?",
+    "text": "¿Cuál es el nombre del circuito de carreras ubicado en Mónaco?",
     "answers": [
       {
-        "text": "Saturno",
-        "correct": false
-      },
-      {
-        "text": "Júpiter",
+        "text": "Circuito de Montecarlo",
         "correct": true
       },
       {
-        "text": "Urano",
+        "text": "Circuito de Silverstone",
         "correct": false
       },
       {
-        "text": "Neptuno",
+        "text": "Circuito de Monza",
+        "correct": false
+      },
+      {
+        "text": "Circuito de Suzuka",
         "correct": false
       }
     ],
     "time": 10
   },
   {
-    "text": "¿Cuál es la montaña más alta del mundo?",
+    "text": "¿Qué empresa japonesa es conocida por sus modelos Skyline y GT-R?",
     "answers": [
       {
-        "text": "K2",
+        "text": "Honda",
         "correct": false
       },
       {
-        "text": "Monte Everest",
+        "text": "Toyota",
+        "correct": false
+      },
+      {
+        "text": "Nissan",
         "correct": true
       },
       {
-        "text": "Kangchenjunga",
-        "correct": false
-      },
-      {
-        "text": "Lhotse",
+        "text": "Mazda",
         "correct": false
       }
     ],
     "time": 10
   },
   {
-    "text": "¿Quién pintó la Mona Lisa?",
+    "text": "¿Qué marca italiana es famosa por su modelo 1000?",
     "answers": [
       {
-        "text": "Leonardo da Vinci",
+        "text": "Ferrari",
+        "correct": false
+      },
+      {
+        "text": "Lamborghini",
+        "correct": false
+      },
+      {
+        "text": "Alfa Romeo",
+        "correct": false
+      },
+      {
+        "text": "Fiat",
+        "correct": true
+      }
+    ],
+    "time": 10
+  },
+  {
+    "text": "¿Qué marca sueca es conocida por fabricar vehículos de alta seguridad y calidad?",
+    "answers": [
+      {
+        "text": "Volvo",
         "correct": true
       },
       {
-        "text": "Miguel Ángel",
+        "text": "Saab",
         "correct": false
       },
       {
-        "text": "Rafael",
+        "text": "Scania",
         "correct": false
       },
       {
-        "text": "Pablo Picasso",
+        "text": "Koenigsegg",
+        "correct": false
+      }
+    ],
+    "time": 10
+  },
+  {
+    "text": "¿Qué tecnología de propulsión utilizan los vehículos híbridos?",
+    "answers": [
+      {
+        "text": "Combustión interna solamente",
+        "correct": false
+      },
+      {
+        "text": "Eléctrica solamente",
+        "correct": false
+      },
+      {
+        "text": "Combustión interna y eléctrica",
+        "correct": true
+      },
+      {
+        "text": "Celdas de hidrógeno",
         "correct": false
       }
     ],

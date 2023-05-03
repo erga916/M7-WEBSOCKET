@@ -1,175 +1,263 @@
 [
     {
-        "text": "¿En qué año se fundó la ciudad de Nueva York?",
+        "text": "¿Cuál es el videojuego más vendido de todos los tiempos?",
         "answers": [
             {
-                "text": "1609",
+                "text": "Tetris",
                 "correct": false
             },
             {
-                "text": "1624",
+                "text": "Super Mario Bros.",
+                "correct": false
+            },
+            {
+                "text": "Minecraft",
                 "correct": true
             },
             {
-                "text": "1682",
-                "correct": false
-            },
-            {
-                "text": "1746",
+                "text": "Grand Theft Auto V",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Cuál es el océano más grande del mundo?",
+        "text": "¿En qué año fue lanzado el primer videojuego de la serie 'The Legend of Zelda'?",
         "answers": [
             {
-                "text": "Océano Atlántico",
-                "correct": false
-            },
-            {
-                "text": "Océano Índico",
-                "correct": false
-            },
-            {
-                "text": "Océano Pacífico",
+                "text": "1986",
                 "correct": true
             },
             {
-                "text": "Océano Ártico",
+                "text": "1987",
+                "correct": false
+            },
+            {
+                "text": "1990",
+                "correct": false
+            },
+            {
+                "text": "1993",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Quién escribió el libro 'El Quijote'?",
+        "text": "¿Cuál es el nombre del protagonista en la serie de videojuegos 'The Elder Scrolls'?",
         "answers": [
             {
-                "text": "Federico García Lorca",
+                "text": "Geralt",
                 "correct": false
             },
             {
-                "text": "Miguel de Cervantes",
+                "text": "Nathan Drake",
+                "correct": false
+            },
+            {
+                "text": "No hay un único protagonista",
                 "correct": true
             },
             {
-                "text": "Gabriel García Márquez",
-                "correct": false
-            },
-            {
-                "text": "Jorge Luis Borges",
+                "text": "Lara Croft",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Cuál es el metal más caro del mundo?",
+        "text": "¿Cuál es el nombre del mundo en el que se desarrolla la mayoría de la serie 'Super Mario'?",
         "answers": [
             {
-                "text": "Oro",
-                "correct": false
-            },
-            {
-                "text": "Platino",
-                "correct": false
-            },
-            {
-                "text": "Paladio",
-                "correct": false
-            },
-            {
-                "text": "Rodio",
-                "correct": true
-            }
-        ],
-        "time": 10
-    },
-    {
-        "text": "¿Cuál es el país con más islas en el mundo?",
-        "answers": [
-            {
-                "text": "Filipinas",
-                "correct": false
-            },
-            {
-                "text": "Indonesia",
+                "text": "Reino Champiñón",
                 "correct": true
             },
             {
-                "text": "Japón",
+                "text": "Hyrule",
                 "correct": false
             },
             {
-                "text": "Maldivas",
+                "text": "Azeroth",
+                "correct": false
+            },
+            {
+                "text": "Rapture",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Quién fue el primer hombre en pisar la luna?",
+        "text": "¿Qué compañía desarrolló el videojuego 'Half-Life'?",
         "answers": [
             {
-                "text": "Neil Armstrong",
+                "text": "Valve",
                 "correct": true
             },
             {
-                "text": "Buzz Aldrin",
+                "text": "Blizzard",
                 "correct": false
             },
             {
-                "text": "Michael Collins",
+                "text": "Bethesda",
                 "correct": false
             },
             {
-                "text": "Yuri Gagarin",
+                "text": "Bungie",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿En qué continente se encuentra Egipto?",
+        "text": "¿En qué año fue lanzado el primer videojuego de la serie 'Pokémon'?",
         "answers": [
             {
-                "text": "África",
+                "text": "19910",
+                "correct": false
+            },
+            {
+                "text": "1996",
                 "correct": true
             },
             {
-                "text": "Asia",
+                "text": "1998",
                 "correct": false
             },
             {
-                "text": "Europa",
-                "correct": false
-            },
-            {
-                "text": "América",
+                "text": "2000",
                 "correct": false
             }
         ],
         "time": 10
     },
     {
-        "text": "¿Quién inventó el teléfono?",
+        "text": "¿Cuál es el nombre del protagonista en la serie de videojuegos 'Uncharted'?",
         "answers": [
             {
-                "text": "Thomas Edison",
-                "correct": false
-            },
-            {
-                "text": "Alexander Graham Bell",
+                "text": "Nathan Drake",
                 "correct": true
             },
             {
-                "text": "Nikola Tesla",
+                "text": "Marcus Fenix",
                 "correct": false
             },
             {
-                "text": "Marconi",
+                "text": "Kratos",
+                "correct": false
+            },
+            {
+                "text": "Ezio Auditore",
+                "correct": false
+            }
+        ],
+        "time": 10
+    },
+    {
+        "text": "¿Qué videojuego popularizó el género Battle Royale?",
+        "answers": [
+            {
+                "text": "Fortnite",
+                "correct": false
+            },
+            {
+                "text": "PlayerUnknown's Battlegrounds (PUBG)",
+                "correct": true
+            },
+            {
+                "text": "Apex Legends",
+                "correct": false
+            },
+            {
+                "text": "Call of Duty: Warzone",
+                "correct": false
+            }
+        ],
+        "time": 10
+    },
+    {
+        "text": "¿Cuál es el nombre de la inteligencia artificial enemiga en la serie de videojuegos 'Halo'?",
+        "answers": [
+            {
+                "text": "Cortana",
+                "correct": false
+            },
+            {
+                "text": "GLaDOS",
+                "correct": false
+            },
+            {
+                "text": "SHODAN",
+                "correct": false
+            },
+            {
+                "text": "Gravemind",
+                "correct": true
+            }
+        ],
+        "time": 10
+    },
+    {
+        "text": "¿Cuál es el nombre de la ciudad en la que se desarrolla la mayoría del videojuego 'Grand Theft Auto: San Andreas'?",
+        "answers": [
+            {
+                "text": "Liberty City",
+                "correct": false
+            },
+            {
+                "text": "Vice City",
+                "correct": false
+            },
+            {
+                "text": "Los Santos",
+                "correct": true
+            },
+            {
+                "text": "San Fierro",
+                "correct": false
+            }
+        ],
+        "time": 10
+    },
+    {
+        "text": "¿Cuál es el nombre de la princesa que Mario rescata en la mayoría de los juegos de la serie 'Super Mario'?",
+        "answers": [
+            {
+                "text": "Zelda",
+                "correct": false
+            },
+            {
+                "text": "Samus",
+                "correct": false
+            },
+            {
+                "text": "Peach",
+                "correct": true
+            },
+            {
+                "text": "Daisy",
+                "correct": false
+            }
+        ],
+        "time": 10
+    },
+    {
+        "text": "¿Cuál es el nombre del personaje principal en la serie de videojuegos 'Tomb Raider'?",
+        "answers": [
+            {
+                "text": "Lara Croft",
+                "correct": true
+            },
+            {
+                "text": "Aloy",
+                "correct": false
+            },
+            {
+                "text": "Chloe Frazer",
+                "correct": false
+            },
+            {
+                "text": "Ellie",
                 "correct": false
             }
         ],
