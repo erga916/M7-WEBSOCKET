@@ -49,7 +49,8 @@ function displayQuestion(question) {
     const button = document.createElement("button");
     button.textContent = answer.text;
     button.onclick = () => {
-      socket.emit("answer", { nickname: nicknameInput.value, question: question.index, answer: index });
+      const timeLeft = parseInt(document.getElementById("timeLeft").textContent, 10);
+      socket.emit("answer", { nickname: nicknameInput.value, question: question.index, answer: index, timeLeft });
       disableAnswerButtons();
     };
     answersElement.appendChild(button);

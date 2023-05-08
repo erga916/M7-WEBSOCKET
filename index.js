@@ -57,7 +57,7 @@ io.on("connection", (socket) => {
       let question = preguntas[data.question];
       let answer = question.answers[data.answer];
       if (answer.correct) {
-        player.score += question.time;
+        player.score += data.timeLeft;
         io.emit("players", players);
         io.emit("liveScoreboard", players);
       }
